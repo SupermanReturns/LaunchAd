@@ -79,6 +79,8 @@
             return image;
         }
     }
+    DebugLog(@"请添加启动图片");
+
     return nil;
 }
 -(UIImageView *)adImgView{

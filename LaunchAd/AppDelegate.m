@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LaunchAd.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor=[UIColor whiteColor];
+    
+    ViewController *vc=[[ViewController alloc]init];
+    self.window.rootViewController=[[UINavigationController alloc]initWithRootViewController:vc];
+    NSString *gifUrlString = @"http://img1.imgtn.bdimg.com/it/u=473895314,616407725&fm=206&gp=0.jpg";
+    LaunchAd *launchAd =[LaunchAd initImageWithURL:CGRectMake(0, 0, self.window.bounds.size.width, self.window.bounds.size.height-150) strUrl:gifUrlString adDuration:10.0 options:JWWebImageDefault result:^(UIImage *image, NSURL *url) {
+        NSLog(@"URL====%@",url);
+    }];
+    launchAd.hideSkip = NO;
+    launchAd.clickBlock = ^{
+        NSString *url=@"https://www.baidu.com";
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:url]];
+    };
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
