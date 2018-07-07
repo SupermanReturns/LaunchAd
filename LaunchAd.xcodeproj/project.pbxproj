@@ -15,6 +15,8 @@
 		CF339FBE20EF4D49005E0A51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339FBD20EF4D49005E0A51 /* main.m */; };
 		CF339FC820EF4D49005E0A51 /* LaunchAdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339FC720EF4D49005E0A51 /* LaunchAdTests.m */; };
 		CF339FD320EF4D49005E0A51 /* LaunchAdUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339FD220EF4D49005E0A51 /* LaunchAdUITests.m */; };
+		CF339FE320EF4DD4005E0A51 /* UIImageView+JWWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339FE120EF4DD4005E0A51 /* UIImageView+JWWebCache.m */; };
+		CF339FE620EF4E32005E0A51 /* LaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339FE520EF4E32005E0A51 /* LaunchAd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		CF339FCE20EF4D49005E0A51 /* LaunchAdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchAdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF339FD220EF4D49005E0A51 /* LaunchAdUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAdUITests.m; sourceTree = "<group>"; };
 		CF339FD420EF4D4A005E0A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF339FE120EF4DD4005E0A51 /* UIImageView+JWWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JWWebCache.m"; sourceTree = "<group>"; };
+		CF339FE220EF4DD4005E0A51 /* UIImageView+JWWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JWWebCache.h"; sourceTree = "<group>"; };
+		CF339FE420EF4E32005E0A51 /* LaunchAd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAd.h; sourceTree = "<group>"; };
+		CF339FE520EF4E32005E0A51 /* LaunchAd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		CF339FAD20EF4D41005E0A51 /* LaunchAd */ = {
 			isa = PBXGroup;
 			children = (
+				CF339FE020EF4DBB005E0A51 /* Lib */,
 				CF339FAE20EF4D41005E0A51 /* AppDelegate.h */,
 				CF339FAF20EF4D41005E0A51 /* AppDelegate.m */,
 				CF339FB120EF4D41005E0A51 /* ViewController.h */,
@@ -130,6 +137,17 @@
 				CF339FD420EF4D4A005E0A51 /* Info.plist */,
 			);
 			path = LaunchAdUITests;
+			sourceTree = "<group>";
+		};
+		CF339FE020EF4DBB005E0A51 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CF339FE220EF4DD4005E0A51 /* UIImageView+JWWebCache.h */,
+				CF339FE120EF4DD4005E0A51 /* UIImageView+JWWebCache.m */,
+				CF339FE420EF4E32005E0A51 /* LaunchAd.h */,
+				CF339FE520EF4E32005E0A51 /* LaunchAd.m */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF339FB320EF4D41005E0A51 /* ViewController.m in Sources */,
+				CF339FE320EF4DD4005E0A51 /* UIImageView+JWWebCache.m in Sources */,
 				CF339FBE20EF4D49005E0A51 /* main.m in Sources */,
 				CF339FB020EF4D41005E0A51 /* AppDelegate.m in Sources */,
+				CF339FE620EF4E32005E0A51 /* LaunchAd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +454,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = LaunchAd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +472,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = LaunchAd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
