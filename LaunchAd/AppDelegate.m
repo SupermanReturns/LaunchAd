@@ -24,6 +24,10 @@
     ViewController *vc=[[ViewController alloc]init];
     self.window.rootViewController=[[UINavigationController alloc]initWithRootViewController:vc];
     NSString *gifUrlString = @"http://img1.imgtn.bdimg.com/it/u=473895314,616407725&fm=206&gp=0.jpg";
+//    NSString *gifUrlString=@"https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=百度图片&step_word=&hs=0&pn=52&spn=0&di=112733981580&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=2340257520%2C3784673432&os=912815621%2C1372726060&simid=4283992138%2C614604785&adpicid=0&lpn=0&ln=1943&fr=&fmq=1531100461883_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fwww.lagou.com%2Fi%2Fimage%2FM00%2F02%2FA9%2FCgqKkVaXQS6AKKguAAE_359Yjsk306.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bsw257_z%26e3Bv54AzdH3F25g2ftAzdH3F88d0a8_z%26e3Bip4s&gsm=0&rpstart=0&rpnum=0&islist=&querylist=";
+    
+
+
     LaunchAd *launchAd =[LaunchAd initImageWithURL:CGRectMake(0, 0, self.window.bounds.size.width, self.window.bounds.size.height-150) strUrl:gifUrlString adDuration:10.0 options:JWWebImageDefault result:^(UIImage *image, NSURL *url) {
         NSLog(@"URL====%@",url);
     }];

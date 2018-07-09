@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImageView+JWWebCache.h"
 
 @interface ViewController ()
 @property (weak, nonatomic)  UIWebView *webView;
@@ -25,6 +26,7 @@
     [_webView setScalesPageToFit:YES];                    //自动缩放以适应屏幕
 
     // Do any additional setup after loading the view, typically from a nib.
+
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

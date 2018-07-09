@@ -87,6 +87,7 @@
     if (!_adImgView) {
         _adImgView= [[UIImageView alloc]initWithFrame:_adFrame];
         _adImgView.userInteractionEnabled=YES;
+//        _adImgView.backgroundColor=[UIColor yellowColor];
         _adImgView.alpha=0.2;
         UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
         [_adImgView addGestureRecognizer:tap];
@@ -106,9 +107,7 @@
         _skipButton.layer.cornerRadius=15;
         _skipButton.layer.masksToBounds = YES;
         NSInteger duration =DefaultDuration;
-        if (_adDuration) {
-            duration = _adDuration;
-        }
+        if (_adDuration) duration = _adDuration;
         [_skipButton setTitle:[NSString stringWithFormat:@"%ld 跳过",duration] forState:UIControlStateNormal];
         _skipButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
         [_skipButton addTarget:self action:@selector(skipAction) forControlEvents:UIControlEventTouchUpInside];
@@ -166,7 +165,9 @@
 + (instancetype)initImageWithURL:(CGRect)frame strUrl:(NSString *)strUrl adDuration:(NSInteger)adDuration options:(JWWebImageOptions)options result:(JWWebImageCompletionBlock)result{
     
     LaunchAd *launchAD =[[LaunchAd alloc]initWithFrame:frame adDuration:adDuration];
-    [launchAD.adImgView jw_setImageWithURL:[NSURL URLWithString:strUrl] placeholderImage:nil completed:result];
+//    [launchAD.adImgView jw_setImageWithURL:[NSURL URLWithString:strUrl] placeholderImage:nil options:options completed:result];
+    [launchAD.adImgView jw_setImageWithURL:[NSURL URLWithString:strUrl] placeholderImage:nil options:options completed:result];
+
     return launchAD;
 }
 #pragma mark - 清理缓冲
